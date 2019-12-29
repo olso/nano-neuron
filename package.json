@@ -1,0 +1,17 @@
+{
+  "name": "nano-neuron",
+  "version": "0.0.1",
+  "main": "./src/index.ts",
+  "repository": "git@github.com:olso/nano-neuron.git",
+  "author": "olso <olsansky.martin@gmail.com>",
+  "license": "The Unlicense",
+  "private": true,
+  "scripts": {
+    "start": "tsnd --respawn ./src/index.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.4"
+  }
+}
