@@ -6,8 +6,8 @@ const B = 32;
 const celsiusToFahrenheit = (c: number) => c * W + B;
 
 const generateDataSets = () => {
-  // xTrain -> [0, 1, 2, ...] -> Our tuneable values
-  // yTrain -> [32, 33.8, 35.6, ...] Our predicted values
+  // xTrain -> [0, 1, 2, ...] -> celsius
+  // yTrain -> [32, 33.8, 35.6, ...] -> fahrenheit
 
   const xTrain: number[] = []; // celsius
   const yTrain: number[] = []; // fahrenheit
@@ -18,15 +18,13 @@ const generateDataSets = () => {
     yTrain.push(y);
   }
 
-  // ---
-
-  // xTest -> [0.5, 1.5, 2.5, ...] Our tuneable values
-  // yTest -> [32.9, 34.7, 36.5, ...] Our predicated values
+  // xTest -> [0.5, 1.5, 2.5, ...] -> celsius
+  // yTest -> [32.9, 34.7, 36.5, ...] -> fahrenheit
 
   const xTest: number[] = []; // celsius
   const yTest: number[] = []; // fahrenheit
 
-  // We make sure test set has different data
+  // We make sure test set has different (but still correct) data
 
   for (let x = 0.5; x < 100; x += 1) {
     const y = celsiusToFahrenheit(x);
